@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex items-center justify-center min-h-screen">
+    <div
+      class="container-custom p-8 rounded-2xl w-full mx-auto transform transition-all duration-300"
+    >
+      <h1 class="text-3xl font-bold text-center text-main-heading mb-6">
+        Weather App
+      </h1>
+
+      <div class="flex flex-col sm:flex-row gap-4 mb-6">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter city name..."
+          class="flex-grow p-3 border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-200"
+        />
+        <button
+          id="getWeatherBtn"
+          class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-200 transform hover:-translate-y-1 active:scale-95"
+        >
+          Get Weather
+        </button>
+      </div>
+
+      <div id="weatherResult" class="text-center">
+        <div
+          id="loadingIndicator"
+          class="hidden text-green-500 font-medium mb-4"
+        >
+          Fetching weather...
+        </div>
+        <div id="errorMessage" class="hidden text-red-600 font-medium mb-4">
+          City not found or error fetching data. Please try again.
+        </div>
+
+        <div id="weatherDisplay" class="hidden">
+          <div class="mb-6">
+            <h2
+              id="cityName"
+              class="text-4xl font-extrabold text-main-heading mb-2"
+            ></h2>
+            <p class="text-sub-heading mb-1 text-lg" id="locationDetails"></p>
+            <p class="text-sub-heading text-sm" id="localtime"></p>
+            <p class="text-sub-heading text-sm" id="lastUpdated"></p>
+          </div>
+          <div class="flex flex-col items-center mb-4">
+            <img
+              id="weatherIcon"
+              class="weather-icon"
+              src=""
+              alt="Weather Icon"
+            />
+            <p class="text-sub-heading text-lg" id="weatherDescription"></p>
+            <p class="text-sub-heading text-md" id="dayNightStatus"></p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left"
+          >
+            <div class="grid-item">
+              <span>Temperature:</span>
+              <span id="temperature"></span>
+            </div>
+            <div class="grid-item">
+              <span>Feels Like:</span>
+              <span id="feelsLike"></span>
+            </div>
+            <div class="grid-item">
+              <span>Humidity:</span>
+              <span id="humidity"></span>
+            </div>
+            <div class="grid-item">
+              <span>Wind Speed:</span>
+              <span id="windSpeed"></span>
+            </div>
+            <div class="grid-item">
+              <span>Wind Direction:</span>
+              <span id="windDirection"></span>
+            </div>
+            <div class="grid-item">
+              <span>Pressure:</span>
+              <span id="pressure"></span>
+            </div>
+            <div class="grid-item">
+              <span>Precipitation:</span>
+              <span id="precipitation"></span>
+            </div>
+            <div class="grid-item">
+              <span>Cloud Cover:</span>
+              <span id="cloudCover"></span>
+            </div>
+            <div class="grid-item">
+              <span>UV Index:</span>
+              <span id="uvIndex"></span>
+            </div>
+            <div class="grid-item">
+              <span>Dew Point:</span>
+              <span id="dewPoint"></span>
+            </div>
+            <div class="grid-item">
+              <span>Visibility:</span>
+              <span id="visibility"></span>
+            </div>
+            <div class="grid-item">
+              <span>Wind Gust:</span>
+              <span id="windGust"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
