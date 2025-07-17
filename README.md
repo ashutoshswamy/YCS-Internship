@@ -62,9 +62,8 @@ I have successfully completed all the tasks assigned to me as part of the **1.5 
 
 **Completed Tasks:**
 
-- Built and tested a complete full-stack project (e.g., Blog or Student Manager).
+- Built and tested a complete full-stack project (Student Manager).
 - Conducted frontend and backend testing using browser and Postman.
-- Deployed the frontend via GitHub Pages and the backend on Render/Hostinger.
 
 ---
 
